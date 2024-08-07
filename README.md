@@ -3,11 +3,12 @@
 
 <a href="https://codeclimate.com/github/RasmuS2024/php-project-45/maintainability"><img src="https://api.codeclimate.com/v1/badges/d99a0a6a3c9a58a6fb8c/maintainability" /></a>
 
-<h1> Setup </h1>
+## Setup
+```bash
 git clone https://github.com/RasmuS2024/php-project-45.git
 cd php-project-45
 make install
-
+```
 
 
 https://asciinema.org/a/hL03vZrvLsrIKNsN7lSMa7I0M

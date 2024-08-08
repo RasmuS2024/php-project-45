@@ -9,5 +9,8 @@ git clone https://github.com/RasmuS2024/php-project-45.git
 cd php-project-45
 make install
 ```
-## ASCIINEMA
+## Setup process in asciinema
 https://asciinema.org/a/hL03vZrvLsrIKNsN7lSMa7I0M
+
+## Game process Brain-calc in asciinema
+https://asciinema.org/a/HPQF2yql5DWlUDFmBLdB9LqNk

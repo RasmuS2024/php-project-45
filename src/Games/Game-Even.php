@@ -1,6 +1,6 @@
 <?php
 
-//namespace BrainGames\Games;
+namespace BrainGames\Games;
 
 function isEvenNumber($number)
 {

@@ -1,6 +1,6 @@
 <?php
 
-//namespace BrainGames\Games;
+namespace BrainGames\Games;
 
 function GameBrainCalc()
 {
@@ -9,7 +9,6 @@ function GameBrainCalc()
     $maxRandomNumber2 = 10;
     $operationTypes = ['+', '-', '*'];
     $gameDescription = 'What is the result of the expression?';
-    $questions = [];
     for ($i = 0; $i <= COUNTQUESTIONS - 1; $i++) {
         $operation = $operationTypes[random_int(1, 2)];
         $firstNumber = random_int($minRandomNumber, $maxRandomNumber1);

@@ -16,14 +16,14 @@ function StartGame($gameDescription, $questions)
     line('Hello, %s!', $nameOfGamer);
     line($gameDescription);
     for ($i = 0; $i <= COUNTQUESTIONS - 1; $i++) {
-        //line('Question: %s -> %s', $questions[$i][0], $questions[$i][1]);
         line('Question: %s', $questions[$i][0]);
         $userAnswer = prompt('Your answer');
-        if ($userAnswer === $questions[$i][1]) {
+        $rightAnswer = $questions[$i][1];
+        if ($userAnswer === $rightAnswer) {
             $countRightAnswer += 1;
             line('Correct!');
         } else {
-            line("'%s' is wrong answer ;(. Correct answer was '%s'", $userAnswer, $questions[$i][1]);
+            line("'%s' is wrong answer ;(. Correct answer was '%s'", $userAnswer, $rightAnswer);
             line("Let's try again, %s!", $nameOfGamer);
             break;
         }

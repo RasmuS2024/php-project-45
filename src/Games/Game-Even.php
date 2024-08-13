@@ -1,6 +1,6 @@
 <?php
 
-namespace BrainGames\Game\Even;
+namespace BrainGames\Games\Even;
 
 use function BrainGames\Engine\WelcomeAndGetUserName;
 use function BrainGames\Engine\StartGameAndGetResult;

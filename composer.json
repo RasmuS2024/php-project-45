@@ -17,13 +17,15 @@
         "bin/brain-games",
         "bin/brain-even",
         "bin/brain-calc",
-        "bin/brain-gcd"
+        "bin/brain-gcd",
+        "bin/brain-progression"
     ],
     "autoload": {
         "files": [
             "src/Games/Game-Even.php", 
             "src/Games/Game-Calc.php",
             "src/Games/Game-Gcd.php",
+            "src/Games/Game-Progression.php",
             "src/Engine.php" 
         ]
     }

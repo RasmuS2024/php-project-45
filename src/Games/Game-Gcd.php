@@ -1,6 +1,6 @@
 <?php
 
-namespace BrainGames\Game\Gcd;
+namespace BrainGames\Games\Gcd;
 
 use function BrainGames\Engine\WelcomeAndGetUserName;
 use function BrainGames\Engine\StartGameAndGetResult;

@@ -11,6 +11,6 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-use function BrainGames\Game\Even\GameBrainEven;
+use function BrainGames\Games\Even\GameBrainEven;
 
 GameBrainEven();

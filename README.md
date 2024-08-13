@@ -10,10 +10,10 @@ cd php-project-45
 make install
 ```
 ## Setup process in asciinema
-<a href="https://asciinema.org/a/hL03vZrvLsrIKNsN7lSMa7I0M" target="_blank" width="400" height="300"><img src="https://asciinema.org/a/hL03vZrvLsrIKNsN7lSMa7I0M.svg" /></a>
+<a href="https://asciinema.org/a/hL03vZrvLsrIKNsN7lSMa7I0M" target="_blank" width="400" height="300"><img src="https://asciinema.org/a/hL03vZrvLsrIKNsN7lSMa7I0M.svg" width="300" height="214" /></a>
 
 ## Game process Brain-calc in asciinema
-<a href="https://asciinema.org/a/HPQF2yql5DWlUDFmBLdB9LqNk" target="_blank" width="400" height="300"><img src="https://asciinema.org/a/HPQF2yql5DWlUDFmBLdB9LqNk.svg" /></a>
+<a href="https://asciinema.org/a/HPQF2yql5DWlUDFmBLdB9LqNk" target="_blank" width="400" height="300"><img src="https://asciinema.org/a/HPQF2yql5DWlUDFmBLdB9LqNk.svg" width="300" height="214" /></a>
 
 ## Game process Brain-gcd in asciinema
-<a href="https://asciinema.org/a/cxsbk0yP1ERvdKjpfkb2T1x5I" target="_blank" width="400" height="300"><img src="https://asciinema.org/a/cxsbk0yP1ERvdKjpfkb2T1x5I.svg" /></a>
+<a href="https://asciinema.org/a/cxsbk0yP1ERvdKjpfkb2T1x5I" target="_blank" width="400" height="300"><img src="https://asciinema.org/a/cxsbk0yP1ERvdKjpfkb2T1x5I.svg" width="300" height="214" /></a>

@@ -17,3 +17,6 @@ make install
 
 ## Game process Brain-gcd in asciinema
 <a href="https://asciinema.org/a/cxsbk0yP1ERvdKjpfkb2T1x5I" target="_blank"><img src="https://asciinema.org/a/cxsbk0yP1ERvdKjpfkb2T1x5I.svg" width="400" height="300" /></a>
+
+## Game process Brain-progression in asciinema
+<a href="https://asciinema.org/a/Q2U30AbqIakjJfRww5W7WBVh7" target="_blank"><img src="https://asciinema.org/a/Q2U30AbqIakjJfRww5W7WBVh7.svg width="400" height="300" " /></a>

@@ -17,4 +17,5 @@ https://asciinema.org/a/HPQF2yql5DWlUDFmBLdB9LqNk
 
 ## Game process Brain-gcd in asciinema
 https://asciinema.org/a/cxsbk0yP1ERvdKjpfkb2T1x5I
-<script src="https://asciinema.org/a/cxsbk0yP1ERvdKjpfkb2T1x5I.js" id="asciicast-cxsbk0yP1ERvdKjpfkb2T1x5I" async="true"></script>
+
+<a href="https://asciinema.org/a/cxsbk0yP1ERvdKjpfkb2T1x5I" target="_blank"><img src="https://asciinema.org/a/cxsbk0yP1ERvdKjpfkb2T1x5I.svg" /></a>

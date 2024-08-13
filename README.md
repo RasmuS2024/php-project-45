@@ -10,12 +10,10 @@ cd php-project-45
 make install
 ```
 ## Setup process in asciinema
-https://asciinema.org/a/hL03vZrvLsrIKNsN7lSMa7I0M
+<a href="https://asciinema.org/a/hL03vZrvLsrIKNsN7lSMa7I0M" target="_blank"><img src="https://asciinema.org/a/hL03vZrvLsrIKNsN7lSMa7I0M.svg" /></a>
 
 ## Game process Brain-calc in asciinema
-https://asciinema.org/a/HPQF2yql5DWlUDFmBLdB9LqNk
+<a href="https://asciinema.org/a/HPQF2yql5DWlUDFmBLdB9LqNk" target="_blank"><img src="https://asciinema.org/a/HPQF2yql5DWlUDFmBLdB9LqNk.svg" /></a>
 
 ## Game process Brain-gcd in asciinema
-https://asciinema.org/a/cxsbk0yP1ERvdKjpfkb2T1x5I
-
 <a href="https://asciinema.org/a/cxsbk0yP1ERvdKjpfkb2T1x5I" target="_blank"><img src="https://asciinema.org/a/cxsbk0yP1ERvdKjpfkb2T1x5I.svg" /></a>

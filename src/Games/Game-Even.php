@@ -1,6 +1,10 @@
 <?php
 
-namespace BrainGames\Games;
+namespace BrainGames\Game\Even;
+
+use function BrainGames\Engine\WelcomeAndGetUserName;
+use function BrainGames\Engine\StartGameAndGetResult;
+use function BrainGames\Engine\showResultAndBye;
 
 function isEvenNumber($number)
 {
@@ -14,13 +18,16 @@ function isEvenNumber($number)
 
 function GameBrainEven()
 {
-    $countQuestions = 3;
+    $countRounds = 3;
     $maxRandomNumber = 100;
     $gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
-    $questions = [];
-    for ($i = 0; $i <= COUNTQUESTIONS - 1; $i++) {
+    $roundNumber = 1;
+    $gameResult = true;
+    $nameOfGamer = WelcomeAndGetUserName($gameDescription);
+    while ($roundNumber <= $countRounds && $gameResult) {
         $randomNumber = strval(random_int(1, $maxRandomNumber));
-        $questions[] = [$randomNumber, isEvenNumber($randomNumber)];
+        $gameResult = StartGameAndGetResult($randomNumber, isEvenNumber($randomNumber));
+        $roundNumber += 1;
     }
-    StartGame($gameDescription, $questions);
+    showResultAndBye($nameOfGamer, $gameResult);
 }

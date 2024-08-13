@@ -14,3 +14,6 @@ https://asciinema.org/a/hL03vZrvLsrIKNsN7lSMa7I0M
 
 ## Game process Brain-calc in asciinema
 https://asciinema.org/a/HPQF2yql5DWlUDFmBLdB9LqNk
+
+## Game process Brain-gcd in asciinema
+https://asciinema.org/a/cxsbk0yP1ERvdKjpfkb2T1x5I

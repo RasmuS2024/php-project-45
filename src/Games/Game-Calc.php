@@ -1,18 +1,27 @@
 <?php
 
-namespace BrainGames\Games;
+namespace BrainGames\Game\Calc;
+
+use function BrainGames\Engine\WelcomeAndGetUserName;
+use function BrainGames\Engine\StartGameAndGetResult;
+use function BrainGames\Engine\showResultAndBye;
+
 
 function GameBrainCalc()
 {
-    $minRandomNumber = 1;
-    $maxRandomNumber1 = 20;
-    $maxRandomNumber2 = 10;
-    $operationTypes = ['+', '-', '*'];
+    $countRounds = 3;
     $gameDescription = 'What is the result of the expression?';
-    for ($i = 0; $i <= COUNTQUESTIONS - 1; $i++) {
-        $operation = $operationTypes[random_int(1, 2)];
-        $firstNumber = random_int($minRandomNumber, $maxRandomNumber1);
-        $secondNumber = random_int($minRandomNumber, $maxRandomNumber2);
+    $nameOfGamer = WelcomeAndGetUserName($gameDescription);
+    $minNumber = 1;
+    $maxNumber1 = 20;
+    $maxNumber2 = 10;
+    $roundNumber = 1;
+    $gameResult = true;
+    $operationTypes = ['+', '-', '*'];
+    while ($roundNumber <= $countRounds && $gameResult) {
+        $operation = $operationTypes[random_int(0, 2)];
+        $firstNumber = random_int($minNumber, $maxNumber1);
+        $secondNumber = random_int($minNumber, $maxNumber2);
         switch ($operation) {
             case "+":
                 $calcAnswer = $firstNumber + $secondNumber;
@@ -26,7 +35,8 @@ function GameBrainCalc()
         }
         $calcQuestion = strval($firstNumber) . " " . $operation . " " . strval($secondNumber);
         $rightAnswer = strval($calcAnswer);
-        $questions[] = [$calcQuestion, $rightAnswer];
+        $gameResult = StartGameAndGetResult($calcQuestion, $rightAnswer);
+        $roundNumber += 1;
     }
-        StartGame($gameDescription, $questions);
+    showResultAndBye($nameOfGamer, $gameResult);
 }

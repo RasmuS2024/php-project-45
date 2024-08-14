@@ -1,3 +1,13 @@
+## Brain games 
+This is my first PHP project on Hexlet.
+Это мой первый PHP проект на Хекслете.
+
+## Requirements
+* Linux, WSL
+* PHP >= 8.1.2
+* Make
+* Git
+
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/RasmuS2024/php-project-45/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/RasmuS2024/php-project-45/actions)
 

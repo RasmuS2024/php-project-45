@@ -12,7 +12,7 @@ function GetRandomCalc()
     $maxNumber1 = 20;
     $maxNumber2 = 10;
     $operationTypes = ['+', '-', '*'];
-    $operation = $operationTypes[random_int(0, 2)];
+    $operation = $operationTypes[random_int(0, count($operationTypes) - 1)];
     $firstNumber = random_int($minNumber, $maxNumber1);
     $secondNumber = random_int($minNumber, $maxNumber2);
     switch ($operation) {

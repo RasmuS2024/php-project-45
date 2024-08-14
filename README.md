@@ -12,6 +12,9 @@ make install
 ## Setup process in asciinema
 <a href="https://asciinema.org/a/hL03vZrvLsrIKNsN7lSMa7I0M" target="_blank"><img src="https://asciinema.org/a/hL03vZrvLsrIKNsN7lSMa7I0M.svg" width="400" height="300" /></a>
 
+## Game process Brain-even in asciinema
+<a href="https://asciinema.org/a/ieUIrUBgJNwkFEap8tAAEvYFN" target="_blank"><img src="https://asciinema.org/a/ieUIrUBgJNwkFEap8tAAEvYFN.svg" width="400" height="300" /></a>
+
 ## Game process Brain-calc in asciinema
 <a href="https://asciinema.org/a/HPQF2yql5DWlUDFmBLdB9LqNk" target="_blank"><img src="https://asciinema.org/a/HPQF2yql5DWlUDFmBLdB9LqNk.svg" width="400" height="300" /></a>
 

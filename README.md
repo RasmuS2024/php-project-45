@@ -20,9 +20,7 @@ make install
 
 ## Game process Brain-progression in asciinema
 <a href="https://asciinema.org/a/Q2U30AbqIakjJfRww5W7WBVh7" target="_blank"><img src="https://asciinema.org/a/Q2U30AbqIakjJfRww5W7WBVh7.svg" width="400" height="300" /></a>
-<<<<<<< Updated upstream
-=======
 
 ## Game process Brain-prime in asciinema
 <a href="https://asciinema.org/a/ce9dekkLNig6L5n5zJZ1bDjqI" target="_blank"><img src="https://asciinema.org/a/ce9dekkLNig6L5n5zJZ1bDjqI.svg" width="400" height="300" /></a>
->>>>>>> Stashed changes
+

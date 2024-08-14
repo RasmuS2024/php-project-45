@@ -1,8 +1,3 @@
 /vendor/
-<<<<<<< Updated upstream
 /asciinema/
 *.cast
-=======
-*.cast
-/asciinema/
->>>>>>> Stashed changes

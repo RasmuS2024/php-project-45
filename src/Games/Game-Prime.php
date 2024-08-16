@@ -6,7 +6,7 @@ use function BrainGames\Engine\welcomeAndGetUserName;
 use function BrainGames\Engine\startGameAndGetResult;
 use function BrainGames\Engine\showResultAndBye;
 
-function isPrimeNumber($number)
+function isPrimeNumber(int $number)
 {
     if ($number === 2) {
         return 'yes';

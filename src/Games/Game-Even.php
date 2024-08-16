@@ -6,7 +6,7 @@ use function BrainGames\Engine\welcomeAndGetUserName;
 use function BrainGames\Engine\startGameAndGetResult;
 use function BrainGames\Engine\showResultAndBye;
 
-function isEvenNumber($number)
+function isEvenNumber(int $number): string
 {
     if ($number % 2 === 0) {
         return 'yes';

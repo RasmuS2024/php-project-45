@@ -5,7 +5,7 @@ namespace BrainGames\Engine;
 use function cli\line;
 use function cli\prompt;
 
-function welcomeAndGetUserName($gameDescription)
+function welcomeAndGetUserName(string $gameDescription)
 {
     line('Welcome to the Brain Games!');
     $name = prompt('May I have your name?', false, $marker = ' ');
@@ -14,7 +14,7 @@ function welcomeAndGetUserName($gameDescription)
     return $name;
 }
 
-function startGameAndGetResult($question, $rightAnswer)
+function startGameAndGetResult(string $question, string $rightAnswer)
 {
     line('Question: %s', $question);
     $gamerAnswer = prompt('Your answer');
@@ -27,7 +27,7 @@ function startGameAndGetResult($question, $rightAnswer)
     }
 }
 
-function showResultAndBye($nameOfGamer, $gameResult)
+function showResultAndBye(string $nameOfGamer, bool $gameResult)
 {
     if ($gameResult) {
         line("Congratulations, %s!", $nameOfGamer);

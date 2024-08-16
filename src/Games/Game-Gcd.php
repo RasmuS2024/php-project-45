@@ -6,7 +6,7 @@ use function BrainGames\Engine\welcomeAndGetUserName;
 use function BrainGames\Engine\startGameAndGetResult;
 use function BrainGames\Engine\showResultAndBye;
 
-function getGcd($number1, $number2)
+function getGcd(int $number1, int $number2)
 {
     while ($number2 != 0) {
         $temp = $number2;
@@ -30,7 +30,7 @@ function gameBrainGcd()
         $firstNumber = random_int($minNumber, $maxNumber);
         $secondNumber = random_int($minNumber, $maxNumber);
         $question = "{$firstNumber} {$secondNumber}";
-        $rightAnswer = strval(GetGcd($firstNumber, $secondNumber));
+        $rightAnswer = strval(getGcd($firstNumber, $secondNumber));
         $gameResult = startGameAndGetResult($question, $rightAnswer);
         $roundNumber += 1;
     }

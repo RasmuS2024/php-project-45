@@ -1,10 +1,14 @@
 ## Brain games 
 This is my first PHP project on Hexlet.
+5 console games "Brain games".
+
 Это мой первый PHP проект на Хекслете.
+5 консольных игр "Brain games".
 
 ## Requirements
 * Linux, WSL
 * PHP >= 8.1.2
+* Composer
 * Make
 * Git
 

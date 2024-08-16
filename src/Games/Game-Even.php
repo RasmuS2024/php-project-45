@@ -25,8 +25,8 @@ function gameBrainEven()
     $gameResult = true;
     $nameOfGamer = welcomeAndGetUserName($gameDescription);
     while ($roundNumber <= $countRounds && $gameResult) {
-        $randomNumber = strval(random_int(1, $maxRandomNumber));
-        $gameResult = startGameAndGetResult($randomNumber, isEvenNumber($randomNumber));
+        $randomNumber = random_int(1, $maxRandomNumber);
+        $gameResult = startGameAndGetResult(strval($randomNumber), isEvenNumber($randomNumber));
         $roundNumber += 1;
     }
     showResultAndBye($nameOfGamer, $gameResult);

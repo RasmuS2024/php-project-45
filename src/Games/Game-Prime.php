@@ -35,8 +35,8 @@ function gameBrainPrime()
     $gameResult = true;
     $nameOfGamer = welcomeAndGetUserName($gameDescription);
     while ($roundNumber <= $countRounds && $gameResult) {
-        $randomNumber = strval(random_int(1, $maxRandomNumber));
-        $gameResult = startGameAndGetResult($randomNumber, isPrimeNumber($randomNumber));
+        $randomNumber = random_int(1, $maxRandomNumber);
+        $gameResult = startGameAndGetResult(strval($randomNumber), isPrimeNumber($randomNumber));
         $roundNumber += 1;
     }
     showResultAndBye($nameOfGamer, $gameResult);

@@ -1,5 +1,5 @@
 install:
-	composer install
+	composer install --ignore-platform-req=ext-simplexml --ignore-platform-req=ext-xmlwriter
 
 brain-games:
 	./bin/brain-games

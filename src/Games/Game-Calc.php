@@ -2,11 +2,11 @@
 
 namespace BrainGames\Games\Calc;
 
-use function BrainGames\Engine\WelcomeAndGetUserName;
-use function BrainGames\Engine\StartGameAndGetResult;
+use function BrainGames\Engine\welcomeAndGetUserName;
+use function BrainGames\Engine\startGameAndGetResult;
 use function BrainGames\Engine\showResultAndBye;
 
-function GetRandomCalc()
+function getRandomCalc()
 {
     $minNumber = 1;
     $maxNumber1 = 20;
@@ -29,16 +29,16 @@ function GetRandomCalc()
     return ["{$firstNumber} {$operation} {$secondNumber}", $calcAnswer];
 }
 
-function GameBrainCalc()
+function gameBrainCalc()
 {
     $countRounds = 3;
     $gameDescription = 'What is the result of the expression?';
-    $nameOfGamer = WelcomeAndGetUserName($gameDescription);
+    $nameOfGamer = welcomeAndGetUserName($gameDescription);
     $roundNumber = 1;
     $gameResult = true;
     while ($roundNumber <= $countRounds && $gameResult) {
-        [$question, $rightAnswer] = GetRandomCalc();
-        $gameResult = StartGameAndGetResult($question, $rightAnswer);
+        [$question, $rightAnswer] = getRandomCalc();
+        $gameResult = startGameAndGetResult($question, $rightAnswer);
         $roundNumber += 1;
     }
     showResultAndBye($nameOfGamer, $gameResult);

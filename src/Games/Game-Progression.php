@@ -2,11 +2,11 @@
 
 namespace BrainGames\Games\Progression;
 
-use function BrainGames\Engine\WelcomeAndGetUserName;
-use function BrainGames\Engine\StartGameAndGetResult;
+use function BrainGames\Engine\welcomeAndGetUserName;
+use function BrainGames\Engine\startGameAndGetResult;
 use function BrainGames\Engine\showResultAndBye;
 
-function GetProgressionQuestion()
+function getProgressionQuestion()
 {
     $maxNumber = 20;
     $progression[] = strval(random_int(1, $maxNumber));
@@ -27,16 +27,16 @@ function GetProgressionQuestion()
     return [implode(' ', $progression), $rightAnswer];
 }
 
-function GameBrainProgression()
+function gameBrainProgression()
 {
     $countRounds = 3;
     $roundNumber = 1;
     $gameResult = true;
     $gameDescription = 'What number is missing in the progression?';
-    $nameOfGamer = WelcomeAndGetUserName($gameDescription);
+    $nameOfGamer = welcomeAndGetUserName($gameDescription);
     while ($roundNumber <= $countRounds && $gameResult) {
-        [$question, $rightAnswer] = GetProgressionQuestion();
-        $gameResult = StartGameAndGetResult($question, $rightAnswer);
+        [$question, $rightAnswer] = getProgressionQuestion();
+        $gameResult = startGameAndGetResult($question, $rightAnswer);
         $roundNumber += 1;
     }
     showResultAndBye($nameOfGamer, $gameResult);

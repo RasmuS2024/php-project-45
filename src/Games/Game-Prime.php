@@ -2,8 +2,8 @@
 
 namespace BrainGames\Games\Prime;
 
-use function BrainGames\Engine\WelcomeAndGetUserName;
-use function BrainGames\Engine\StartGameAndGetResult;
+use function BrainGames\Engine\welcomeAndGetUserName;
+use function BrainGames\Engine\startGameAndGetResult;
 use function BrainGames\Engine\showResultAndBye;
 
 function isPrimeNumber($number)
@@ -26,17 +26,17 @@ function isPrimeNumber($number)
 }
 
 
-function GameBrainPrime()
+function gameBrainPrime()
 {
     $countRounds = 3;
     $gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     $maxRandomNumber = 25;
     $roundNumber = 1;
     $gameResult = true;
-    $nameOfGamer = WelcomeAndGetUserName($gameDescription);
+    $nameOfGamer = welcomeAndGetUserName($gameDescription);
     while ($roundNumber <= $countRounds && $gameResult) {
         $randomNumber = strval(random_int(1, $maxRandomNumber));
-        $gameResult = StartGameAndGetResult($randomNumber, isPrimeNumber($randomNumber));
+        $gameResult = startGameAndGetResult($randomNumber, isPrimeNumber($randomNumber));
         $roundNumber += 1;
     }
     showResultAndBye($nameOfGamer, $gameResult);

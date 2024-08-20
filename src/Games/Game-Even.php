@@ -6,28 +6,31 @@ use function BrainGames\Engine\welcomeAndGetUserName;
 use function BrainGames\Engine\startGameAndGetResult;
 use function BrainGames\Engine\showResultAndBye;
 
-function isEvenNumber(int $number): string
+const GAMEDESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".';
+const COUNTROUNDS = 3;
+const MAXRANDOMNUMBER = 100;
+const MINNUMBER = 1;
+
+function isEvenNumber(int $number): bool
 {
-    if ($number % 2 === 0) {
-        return 'yes';
-    } else {
-        return 'no';
-    }
+    return $number % 2 === 0;
 }
 
 
 function gameBrainEven()
 {
-    $countRounds = 3;
-    $maxRandomNumber = 100;
-    $gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
     $roundNumber = 1;
     $gameResult = true;
-    $nameOfGamer = welcomeAndGetUserName($gameDescription);
-    while ($roundNumber <= $countRounds && $gameResult) {
-        $randomNumber = random_int(1, $maxRandomNumber);
-        $gameResult = startGameAndGetResult(strval($randomNumber), isEvenNumber($randomNumber));
-        $roundNumber += 1;
+    $nameOfGamer = welcomeAndGetUserName(GAMEDESCRIPTION);
+    while ($roundNumber <= COUNTROUNDS && $gameResult) {
+        $randomNumber = random_int(MINNUMBER, MAXRANDOMNUMBER);
+        if (isEvenNumber($randomNumber)) {
+            $rightAnswer = 'yes';
+        } else {
+            $rightAnswer = 'no';
+        }
+        $gameResult = startGameAndGetResult(strval($randomNumber), $rightAnswer);
+        $roundNumber++;
     }
     showResultAndBye($nameOfGamer, $gameResult);
 }

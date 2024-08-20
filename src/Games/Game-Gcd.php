@@ -6,6 +6,11 @@ use function BrainGames\Engine\welcomeAndGetUserName;
 use function BrainGames\Engine\startGameAndGetResult;
 use function BrainGames\Engine\showResultAndBye;
 
+const GAMEDESCRIPTION = 'Find the greatest common divisor of given numbers.';
+const COUNTROUNDS = 3;
+const MINNUMBER = 1;
+const MAXNUMBER = 20;
+
 function getGcd(int $number1, int $number2)
 {
     while ($number2 != 0) {
@@ -19,20 +24,16 @@ function getGcd(int $number1, int $number2)
 
 function gameBrainGcd()
 {
-    $countRounds = 3;
-    $minNumber = 1;
-    $maxNumber = 20;
     $roundNumber = 1;
     $gameResult = true;
-    $gameDescription = 'Find the greatest common divisor of given numbers.';
-    $nameOfGamer = welcomeAndGetUserName($gameDescription);
-    while ($roundNumber <= $countRounds && $gameResult) {
-        $firstNumber = random_int($minNumber, $maxNumber);
-        $secondNumber = random_int($minNumber, $maxNumber);
+    $nameOfGamer = welcomeAndGetUserName(GAMEDESCRIPTION);
+    while ($roundNumber <= COUNTROUNDS && $gameResult) {
+        $firstNumber = random_int(MINNUMBER, MAXNUMBER);
+        $secondNumber = random_int(MINNUMBER, MAXNUMBER);
         $question = "{$firstNumber} {$secondNumber}";
         $rightAnswer = strval(getGcd($firstNumber, $secondNumber));
         $gameResult = startGameAndGetResult($question, $rightAnswer);
-        $roundNumber += 1;
+        $roundNumber++;
     }
     showResultAndBye($nameOfGamer, $gameResult);
 }

@@ -6,15 +6,18 @@ use function BrainGames\Engine\welcomeAndGetUserName;
 use function BrainGames\Engine\startGameAndGetResult;
 use function BrainGames\Engine\showResultAndBye;
 
+const GAMEDESCRIPTION = 'What is the result of the expression?';
+const COUNTROUNDS = 3;
+const MINNUMBER = 1;
+const MAXNUMBER1 = 20;
+const MAXNUMBER2 = 10;
+
 function getRandomCalc()
 {
-    $minNumber = 1;
-    $maxNumber1 = 20;
-    $maxNumber2 = 10;
     $operationTypes = ['+', '-', '*'];
     $operation = $operationTypes[random_int(0, count($operationTypes) - 1)];
-    $firstNumber = random_int($minNumber, $maxNumber1);
-    $secondNumber = random_int($minNumber, $maxNumber2);
+    $firstNumber = random_int(MINNUMBER, MAXNUMBER1);
+    $secondNumber = random_int(MINNUMBER, MAXNUMBER2);
     switch ($operation) {
         case "+":
             $calcAnswer = strval($firstNumber + $secondNumber);
@@ -31,15 +34,13 @@ function getRandomCalc()
 
 function gameBrainCalc()
 {
-    $countRounds = 3;
-    $gameDescription = 'What is the result of the expression?';
-    $nameOfGamer = welcomeAndGetUserName($gameDescription);
+    $nameOfGamer = welcomeAndGetUserName(GAMEDESCRIPTION);
     $roundNumber = 1;
     $gameResult = true;
-    while ($roundNumber <= $countRounds && $gameResult) {
+    while ($roundNumber <= COUNTROUNDS && $gameResult) {
         [$question, $rightAnswer] = getRandomCalc();
         $gameResult = startGameAndGetResult($question, $rightAnswer);
-        $roundNumber += 1;
+        $roundNumber++;
     }
     showResultAndBye($nameOfGamer, $gameResult);
 }

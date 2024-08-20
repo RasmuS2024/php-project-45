@@ -6,17 +6,20 @@ use function BrainGames\Engine\welcomeAndGetUserName;
 use function BrainGames\Engine\startGameAndGetResult;
 use function BrainGames\Engine\showResultAndBye;
 
+const GAMEDESCRIPTION = 'What number is missing in the progression?';
+const COUNTROUNDS = 3;
+const MAXNUMBER = 20;
+const MAXNUMBERPROGRESSION = 10;
+const COUNTPROGRESSION = 10;
+
 function getProgressionQuestion()
 {
     $progression = [];
-    $maxNumber = 20;
-    $progression[] = strval(random_int(1, $maxNumber));
-    $maxNumberProgression = 10;
-    $numberProgression = random_int(1, $maxNumberProgression);
-    $countProgression = 10;
+    $progression[] = strval(random_int(1, MAXNUMBER));
+    $numberProgression = random_int(1, MAXNUMBERPROGRESSION);
     $rightAnswer = '';
-    $progressionAnswerNumber = random_int(2, $countProgression);
-    for ($i = 2; $i <= $countProgression; $i++) {
+    $progressionAnswerNumber = random_int(2, COUNTPROGRESSION);
+    for ($i = 2; $i <= COUNTPROGRESSION; $i++) {
         if ($i !== $progressionAnswerNumber) {
             $progression[] = strval((int)$progression[array_key_last($progression)] + $numberProgression);
         } else {
@@ -31,15 +34,13 @@ function getProgressionQuestion()
 
 function gameBrainProgression()
 {
-    $countRounds = 3;
     $roundNumber = 1;
     $gameResult = true;
-    $gameDescription = 'What number is missing in the progression?';
-    $nameOfGamer = welcomeAndGetUserName($gameDescription);
-    while ($roundNumber <= $countRounds && $gameResult) {
+    $nameOfGamer = welcomeAndGetUserName(GAMEDESCRIPTION);
+    while ($roundNumber <= COUNTROUNDS && $gameResult) {
         [$question, $rightAnswer] = getProgressionQuestion();
         $gameResult = startGameAndGetResult($question, $rightAnswer);
-        $roundNumber += 1;
+        $roundNumber++;
     }
     showResultAndBye($nameOfGamer, $gameResult);
 }

@@ -29,7 +29,7 @@ function showResultAndBye(string $nameOfGamer, bool $gameResult)
     }
 }
 
-function playGame($gameDescription, $gameFunction)
+function playGame(string $gameDescription, string $gameFunction)
 {
     line('Welcome to the Brain Games!');
     $nameOfGamer = prompt('May I have your name?', false, $marker = ' ');

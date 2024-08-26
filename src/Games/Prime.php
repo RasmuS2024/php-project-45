@@ -9,6 +9,9 @@ const MAX_RANDOM_NUMBER = 25;
 
 function isPrimeNumber(int $number): bool
 {
+    if ($number === 1) {
+        return false;
+    }
     if ($number === 2) {
         return true;
     }

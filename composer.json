@@ -26,11 +26,11 @@
     "autoload": {
         "files": [
             "src/Cli.php",
-            "src/Games/Game-Even.php", 
-            "src/Games/Game-Calc.php",
-            "src/Games/Game-Gcd.php",
-            "src/Games/Game-Progression.php",
-            "src/Games/Game-Prime.php",
+            "src/Games/Even.php", 
+            "src/Games/Calc.php",
+            "src/Games/Gcd.php",
+            "src/Games/Progression.php",
+            "src/Games/Prime.php",
             "src/Engine.php" 
         ]
     }

@@ -5,16 +5,9 @@ namespace BrainGames\Engine;
 use function cli\line;
 use function cli\prompt;
 
-function welcomeAndGetUserName(string $gameDescription)
-{
-    line('Welcome to the Brain Games!');
-    $name = prompt('May I have your name?', false, $marker = ' ');
-    line('Hello, %s!', $name);
-    line($gameDescription);
-    return $name;
-}
+const COUNT_ROUNDS = 3;
 
-function startGameAndGetResult(string $question, string $rightAnswer)
+function putQuestionAndGetResult(string $question, string $rightAnswer)
 {
     line('Question: %s', $question);
     $gamerAnswer = prompt('Your answer');
@@ -34,4 +27,20 @@ function showResultAndBye(string $nameOfGamer, bool $gameResult)
     } else {
         line("Let's try again, %s!", $nameOfGamer);
     }
+}
+
+function playGame($gameDescription, $gameFunction)
+{
+    line('Welcome to the Brain Games!');
+    $nameOfGamer = prompt('May I have your name?', false, $marker = ' ');
+    line('Hello, %s!', $nameOfGamer);
+    line($gameDescription);
+    $roundNumber = 1;
+    $gameResult = true;
+    while ($roundNumber <= COUNT_ROUNDS && $gameResult) {
+        [$question, $rightAnswer] = call_user_func($gameFunction);
+        $gameResult = putQuestionAndGetResult($question, $rightAnswer);
+        $roundNumber++;
+    }
+    showResultAndBye($nameOfGamer, $gameResult);
 }

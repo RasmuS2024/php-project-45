@@ -1,19 +1,19 @@
 ## Brain games
 This is my first PHP project on Hexlet.<br>
 5 console games "Brain games":<br>
-Brain-even (the player needs to answer an even number or not),
-Brain-calc (the player needs to calculate the value of the expression),
-Brain-gcd (the player needs to find the largest common divisor),
-Brain-progression (the player needs to find the missing number in the arithmetic progression),
+Brain-even (the player needs to answer an even number or not),<br>
+Brain-calc (the player needs to calculate the value of the expression),<br>
+Brain-gcd (the player needs to find the largest common divisor),<br>
+Brain-progression (the player needs to find the missing number in the arithmetic progression),<br>
 Brain-prime (the player needs to answer a prime number or not).<br>
 All games consist of 3 rounds, if the player answers incorrectly, the game is interrupted with the player losing, in case of 3 correct answers, the player wins.
 <br>
 Это мой первый PHP проект на Хекслете.<br>
 5 консольных игр "Brain games":<br>
-Brain-even (игроку необходимо ответить четное число или нет), 
-Brain-calc (игроку необходимо вычислить значение выражения), 
-Brain-gcd (игроку необходимо найти наибольший общий делитель), 
-Brain-progression (игроку необходимо найти пропущенное число в арифметической прогрессии), 
+Brain-even (игроку необходимо ответить четное число или нет),<br> 
+Brain-calc (игроку необходимо вычислить значение выражения),<br>
+Brain-gcd (игроку необходимо найти наибольший общий делитель),<br>
+Brain-progression (игроку необходимо найти пропущенное число в арифметической прогрессии),<br>
 Brain-prime (игроку необходимо ответить простое число или нет).<br>
 Все игры состоят из 3-х раундов, если игрок отвечает неправильно - игра прерывается с проигрышем игрока, в случае 3 правильных ответов игрок выиграл.
 

@@ -33,8 +33,9 @@ function printResultOfQuestion(bool $result, string $gamerAnswer, string $rightA
 
 function showResultAndBye(string $nameOfGamer, int $round)
 {
-    if ($round === COUNT_ROUNDS + 1) {
+    if ($round === COUNT_ROUNDS) {
         line('Congratulations, %s!', $nameOfGamer);
+        return;
     }
     line('Let\'s try again, %s!', $nameOfGamer);
 }
@@ -52,7 +53,7 @@ function playGame(string $gameDescription, string $gameFunction)
         if (!$resultOfQuestion) {
             break;
         }
+        $roundCount = $i;
     }
-    $roundCount = $i;
     showResultAndBye($nameOfGamer, $roundCount);
 }

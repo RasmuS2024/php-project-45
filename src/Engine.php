@@ -43,7 +43,7 @@ function playGame(string $gameDescription, string $gameFunction)
 {
     $nameOfGamer = welcomeToGameAndGetUserName();
     line($gameDescription);
-    $i = 1;
+    $roundCount = 0;
     for ($i = 1; $i <= COUNT_ROUNDS; $i++) {
         [$question, $rightAnswer] = $gameFunction();
         $userAnswer = putQuestionAndGetAnswer($question);
@@ -53,5 +53,5 @@ function playGame(string $gameDescription, string $gameFunction)
             break;
         }
     }
-    showResultAndBye($nameOfGamer, $i);
+    showResultAndBye($nameOfGamer, $roundCount);
 }

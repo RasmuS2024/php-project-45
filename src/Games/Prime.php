@@ -9,14 +9,11 @@ const MAX_RANDOM_NUMBER = 25;
 
 function isPrimeNumber(int $number): bool
 {
-    if ($number === 1) {
+    if ($number === 1 || $number % 2 === 0) {
         return false;
     }
     if ($number === 2) {
         return true;
-    }
-    if ($number % 2 === 0) {
-        return false;
     }
     $i = 3;
     $max_factor = (int)sqrt($number);
@@ -32,15 +29,11 @@ function isPrimeNumber(int $number): bool
 function getPrimeQuestion()
 {
     $randomNumber = random_int(1, MAX_RANDOM_NUMBER);
-    if (isPrimeNumber($randomNumber)) {
-        $rightAnswer = 'yes';
-    } else {
-        $rightAnswer = 'no';
-    }
-    return [strval($randomNumber), $rightAnswer];
+    $rightAnswer = isPrimeNumber($randomNumber) ? 'yes' : 'no';
+    return [(string)$randomNumber, $rightAnswer];
 }
 
 function playPrime()
 {
-    playGame(GAME_DESCRIPTION, "BrainGames\Games\Prime\getPrimeQuestion");
+    playGame(GAME_DESCRIPTION, 'BrainGames\Games\Prime\getPrimeQuestion');
 }

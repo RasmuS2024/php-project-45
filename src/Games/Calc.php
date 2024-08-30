@@ -11,28 +11,25 @@ const MAX_NUMBER2 = 10;
 
 function calculate(string $operation, int $number1, int $number2): int
 {
-    $result = 0;
     switch ($operation) {
-        case "+":
-            $result = $number1 + $number2;
-            break;
-        case "-":
-            $result = $number1 - $number2;
-            break;
-        case "*":
-            $result = $number1 * $number2;
+        case '+':
+            return $number1 + $number2;
+        case '-':
+            return $number1 - $number2;
+        case '*':
+            return $number1 * $number2;
+        default:
             break;
     }
-    return $result;
 }
 
 function getCalcQuestion()
 {
     $operationTypes = ['+', '-', '*'];
-    $operation = $operationTypes[random_int(0, count($operationTypes) - 1)];
+    $operation = $operationTypes[array_rand($operationTypes)];
     $firstNumber = random_int(MIN_NUMBER, MAX_NUMBER1);
     $secondNumber = random_int(MIN_NUMBER, MAX_NUMBER2);
-    $calcAnswer = strval(calculate($operation, $firstNumber, $secondNumber));
+    $calcAnswer = (string)calculate($operation, $firstNumber, $secondNumber);
     return ["{$firstNumber} {$operation} {$secondNumber}", $calcAnswer];
 }
 

@@ -7,40 +7,50 @@ use function cli\prompt;
 
 const COUNT_ROUNDS = 3;
 
-function putQuestionAndGetResult(string $question, string $rightAnswer)
-{
-    line('Question: %s', $question);
-    $gamerAnswer = prompt('Your answer');
-    if ($gamerAnswer === $rightAnswer) {
-        line('Correct!');
-        return true;
-    } else {
-        line("'%s' is wrong answer ;(. Correct answer was '%s'.", $gamerAnswer, $rightAnswer);
-        return false;
-    }
-}
-
-function showResultAndBye(string $nameOfGamer, bool $gameResult)
-{
-    if ($gameResult) {
-        line("Congratulations, %s!", $nameOfGamer);
-    } else {
-        line("Let's try again, %s!", $nameOfGamer);
-    }
-}
-
-function playGame(string $gameDescription, mixed $gameFunction)
+function welcomeToGameAndGetUserName()
 {
     line('Welcome to the Brain Games!');
-    $nameOfGamer = prompt('May I have your name?', false, $marker = ' ');
-    line('Hello, %s!', $nameOfGamer);
-    line($gameDescription);
-    $roundNumber = 1;
-    $gameResult = true;
-    while ($roundNumber <= COUNT_ROUNDS && $gameResult) {
-        [$question, $rightAnswer] = call_user_func($gameFunction);
-        $gameResult = putQuestionAndGetResult($question, $rightAnswer);
-        $roundNumber++;
+    $userName = prompt('May I have your name?');
+    line('Hello, %s!', $userName);
+    return $userName;
+}
+
+function putQuestionAndGetAnswer(string $question)
+{
+    line('Question: %s', $question);
+    return prompt('Your answer');
+}
+
+function getQuestionResult(string $gamerAnswer, string $rightAnswer)
+{
+    return ($gamerAnswer === $rightAnswer) ? true : false;
+}
+
+function printResultOfQuestion(bool $result, string $gamerAnswer, string $rightAnswer)
+{
+    $result ? line('Correct!') : line("'%s' is wrong answer ;(. Correct answer was '%s'.", $gamerAnswer, $rightAnswer);
+}
+
+function showResultAndBye(string $nameOfGamer, int $round)
+{
+    if ($round === COUNT_ROUNDS + 1) {
+        line('Congratulations, %s!', $nameOfGamer);
     }
-    showResultAndBye($nameOfGamer, $gameResult);
+    line('Let\'s try again, %s!', $nameOfGamer);
+}
+
+function playGame(string $gameDescription, string $gameFunction)
+{
+    $nameOfGamer = welcomeToGameAndGetUserName();
+    line($gameDescription);
+    for ($i = 1; $i <= COUNT_ROUNDS; $i++) {
+        [$question, $rightAnswer] = $gameFunction();
+        $userAnswer = putQuestionAndGetAnswer($question);
+        $resultOfQuestion = getQuestionResult($userAnswer, $rightAnswer);
+        printResultOfQuestion($resultOfQuestion, $userAnswer, $rightAnswer);
+        if (!$resultOfQuestion) {
+            break;
+        }
+    }
+    showResultAndBye($nameOfGamer, $i);
 }

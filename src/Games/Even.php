@@ -16,15 +16,11 @@ function isEvenNumber(int $number): bool
 function getEvenQuestion()
 {
     $randomNumber = random_int(MIN_NUMBER, MAX_RANDOM_NUMBER);
-    if (isEvenNumber($randomNumber)) {
-        $rightAnswer = 'yes';
-    } else {
-        $rightAnswer = 'no';
-    }
-    return [strval($randomNumber), $rightAnswer];
+    $rightAnswer = isEvenNumber($randomNumber) ? 'yes' : 'no';
+    return [(string)$randomNumber, $rightAnswer];
 }
 
 function playEven()
 {
-    playGame(GAME_DESCRIPTION, "BrainGames\Games\Even\getEvenQuestion");
+    playGame(GAME_DESCRIPTION, 'BrainGames\Games\Even\getEvenQuestion');
 }

@@ -9,7 +9,7 @@ const MIN_NUMBER = 1;
 const MAX_NUMBER1 = 20;
 const MAX_NUMBER2 = 10;
 
-function calculate(string $operation, int $number1, int $number2): int
+function calculate(string $operation, int $number1, int $number2)
 {
     switch ($operation) {
         case '+':

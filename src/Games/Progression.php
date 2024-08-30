@@ -13,7 +13,7 @@ const COUNT_PROGRESSION = 10;
 function getProgressionQuestion()
 {
     $firstNumber = (string)random_int(1, MAX_START_NUMBER);
-    $progressionIncrement = (string)random_int(1, MAX_START_NUMBER);
+    $progressionIncrement = random_int(1, MAX_START_NUMBER);
     $progression = range($firstNumber, MAX_NUMBER_PROGRESSION, $progressionIncrement);
     $progression = array_slice($progression, 0, COUNT_PROGRESSION);
     $answerNumber = array_rand($progression);

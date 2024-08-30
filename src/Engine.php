@@ -53,5 +53,6 @@ function playGame(string $gameDescription, string $gameFunction)
             break;
         }
     }
+    $roundCount = $i;
     showResultAndBye($nameOfGamer, $roundCount);
 }

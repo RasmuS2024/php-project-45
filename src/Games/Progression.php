@@ -19,7 +19,7 @@ function getProgressionQuestion()
     $answerNumber = array_rand($progression);
     $rightAnswer = $progression[$answerNumber];
     $progression[$answerNumber] = '..';
-    return [implode(' ', $progression), $rightAnswer];
+    return [implode(' ', $progression), (string)$rightAnswer];
 }
 
 function playProgression()

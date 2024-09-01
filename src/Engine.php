@@ -26,8 +26,8 @@ function printResultOfQuestion(bool $result, string $gamerAnswer, string $rightA
     if ($result) {
         line('Correct!');
     } else {
-        line("'%s' is wrong answer ;(. Correct answer was '%s'.");
-        line("Let\'s try again, %s!', %s", $gamerAnswer, $rightAnswer, $nameOfGamer);
+        line("'%s' is wrong answer ;(. Correct answer was '%s'.", $gamerAnswer, $rightAnswer);
+        line("Let\'s try again, %s!', %s", $nameOfGamer);
     }
 }
 
@@ -38,7 +38,7 @@ function playGame(string $gameDescription, string $gameFunction)
     $nameOfGamer = welcomeToGameAndGetUserName();
     $roundCount = 0;
     for ($i = 1; $i <= COUNT_ROUNDS; $i++) {
-        [$question, $rightAnswer] = $gameFunction;
+        [$question, $rightAnswer] = $gameFunction();
         $gamerAnswer = putQuestionAndGetAnswer($question);
         $resultOfQuestion = ($gamerAnswer === $rightAnswer) ? true : false;
         printResultOfQuestion($resultOfQuestion, $gamerAnswer, $rightAnswer, $nameOfGamer);

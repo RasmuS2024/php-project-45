@@ -8,6 +8,7 @@ This is my first PHP project on Hexlet.<br>
 <b>Brain-prime</b> (the player needs to answer a prime number or not).<br>
 All games consist of 3 rounds, if the player answers incorrectly, the game is interrupted with the player losing, in case of 3 correct answers, the player wins.
 <br>
+
 Это мой первый PHP проект на Хекслете.<br>
 5 консольных игр "Brain games":<br>
 <b>Brain-even</b> (игроку необходимо ответить четное число или нет),<br> 
@@ -19,6 +20,7 @@ All games consist of 3 rounds, if the player answers incorrectly, the game is in
 
 ## Starting games
 To start the game, enter 'make "game name"' in the console, for example: make brain-calc.<br>
+
 Для запуска игры введите в консоли 'make "имя игры"', например: make brain-calc.
 
 ## Requirements

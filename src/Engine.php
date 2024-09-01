@@ -31,7 +31,7 @@ function printResultOfQuestion(bool $result, string $gamerAnswer, string $rightA
     }
 }
 
-function playGame(string $gameDescription, string $gameFunction)
+function playGame(string $gameDescription, callable $gameFunction)
 {
     $nameOfGamer = welcomeToGameAndGetUserName();
     line($gameDescription);

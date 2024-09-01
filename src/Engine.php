@@ -27,7 +27,7 @@ function printResultOfQuestion(bool $result, string $gamerAnswer, string $rightA
         line('Correct!');
     } else {
         line("'%s' is wrong answer ;(. Correct answer was '%s'.", $gamerAnswer, $rightAnswer);
-        line("Let\'s try again, %s!', %s", $nameOfGamer);
+        line("Let's try again, %s!', %s", $nameOfGamer);
     }
 }
 

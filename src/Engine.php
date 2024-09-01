@@ -21,39 +21,30 @@ function putQuestionAndGetAnswer(string $question)
     return prompt('Your answer');
 }
 
-function getQuestionResult(string $gamerAnswer, string $rightAnswer)
+function printResultOfQuestion(bool $result, string $gamerAnswer, string $rightAnswer, string $nameOfGamer)
 {
-    return ($gamerAnswer === $rightAnswer) ? true : false;
-}
-
-function printResultOfQuestion(bool $result, string $gamerAnswer, string $rightAnswer)
-{
-    $result ? line('Correct!') : line("'%s' is wrong answer ;(. Correct answer was '%s'.", $gamerAnswer, $rightAnswer);
-}
-
-function showResultAndBye(string $nameOfGamer, int $round)
-{
-    if ($round === COUNT_ROUNDS) {
-        line('Congratulations, %s!', $nameOfGamer);
-        return;
+    if ($result) {
+        line('Correct!');
+    } else {
+        line("'%s' is wrong answer ;(. Correct answer was '%s'.");
+        line("Let\'s try again, %s!', %s", $gamerAnswer, $rightAnswer, $nameOfGamer);
     }
-    line('Let\'s try again, %s!', $nameOfGamer);
 }
+
 
 function playGame(string $gameDescription, string $gameFunction)
 {
-    $nameOfGamer = welcomeToGameAndGetUserName();
     line($gameDescription);
+    $nameOfGamer = welcomeToGameAndGetUserName();
     $roundCount = 0;
     for ($i = 1; $i <= COUNT_ROUNDS; $i++) {
-        [$question, $rightAnswer] = $gameFunction();
-        $userAnswer = putQuestionAndGetAnswer($question);
-        $resultOfQuestion = getQuestionResult($userAnswer, $rightAnswer);
-        printResultOfQuestion($resultOfQuestion, $userAnswer, $rightAnswer);
+        [$question, $rightAnswer] = $gameFunction;
+        $gamerAnswer = putQuestionAndGetAnswer($question);
+        $resultOfQuestion = ($gamerAnswer === $rightAnswer) ? true : false;
+        printResultOfQuestion($resultOfQuestion, $gamerAnswer, $rightAnswer, $nameOfGamer);
         if (!$resultOfQuestion) {
-            break;
+            return;
         }
-        $roundCount = $i;
     }
-    showResultAndBye($nameOfGamer, $roundCount);
+    line('Congratulations, %s!', $nameOfGamer);
 }

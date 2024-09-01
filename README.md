@@ -1,25 +1,25 @@
 ## Brain games
 This is my first PHP project on Hexlet.<br>
 5 console games "Brain games":<br>
-Brain-even (the player needs to answer an even number or not),<br>
-Brain-calc (the player needs to calculate the value of the expression),<br>
-Brain-gcd (the player needs to find the largest common divisor),<br>
-Brain-progression (the player needs to find the missing number in the arithmetic progression),<br>
-Brain-prime (the player needs to answer a prime number or not).<br>
+<b>Brain-even</b> (the player needs to answer an even number or not),<br>
+<b>Brain-calc</b> (the player needs to calculate the value of the expression),<br>
+<b>Brain-gcd</b> (the player needs to find the largest common divisor),<br>
+<b>Brain-progression</b> (the player needs to find the missing number in the arithmetic progression),<br>
+<b>Brain-prime</b> (the player needs to answer a prime number or not).<br>
 All games consist of 3 rounds, if the player answers incorrectly, the game is interrupted with the player losing, in case of 3 correct answers, the player wins.
 <br>
 Это мой первый PHP проект на Хекслете.<br>
 5 консольных игр "Brain games":<br>
-Brain-even (игроку необходимо ответить четное число или нет),<br> 
-Brain-calc (игроку необходимо вычислить значение выражения),<br>
-Brain-gcd (игроку необходимо найти наибольший общий делитель),<br>
-Brain-progression (игроку необходимо найти пропущенное число в арифметической прогрессии),<br>
-Brain-prime (игроку необходимо ответить простое число или нет).<br>
+<b>Brain-even</b> (игроку необходимо ответить четное число или нет),<br> 
+<b>Brain-calc</b> (игроку необходимо вычислить значение выражения),<br>
+<b>Brain-gcd</b> (игроку необходимо найти наибольший общий делитель),<br>
+<b>Brain-progression (игроку необходимо найти пропущенное число в арифметической прогрессии),<br>
+<b>Brain-prime</b> (игроку необходимо ответить простое число или нет).<br>
 Все игры состоят из 3-х раундов, если игрок отвечает неправильно - игра прерывается с проигрышем игрока, в случае 3 правильных ответов игрок выиграл.
 
 ## Starting games
-To start the game, enter 'make "game name"' in the console, for example: make brain-calc
-Для запуска игры введите в консоли 'make "имя игры"', например: make brain-calc
+To start the game, enter 'make "game name"' in the console, for example: make brain-calc.<br>
+Для запуска игры введите в консоли 'make "имя игры"', например: make brain-calc.
 
 ## Requirements
 * Linux, WSL

@@ -34,8 +34,8 @@ function printResultOfQuestion(bool $result, string $gamerAnswer, string $rightA
 
 function playGame(string $gameDescription, string $gameFunction)
 {
-    line($gameDescription);
     $nameOfGamer = welcomeToGameAndGetUserName();
+    line($gameDescription);
     $roundCount = 0;
     for ($i = 1; $i <= COUNT_ROUNDS; $i++) {
         [$question, $rightAnswer] = $gameFunction();

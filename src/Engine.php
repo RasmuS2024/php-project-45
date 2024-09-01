@@ -39,8 +39,6 @@ function playGame(string $gameDescription, callable $gameFunction)
     for ($i = 1; $i <= COUNT_ROUNDS; $i++) {
         [$question, $rightAnswer] = $gameFunction();
         $gamerAnswer = putQuestionAndGetAnswer($question);
-        var_dump($gamerAnswer);
-        var_dump($rightAnswer);
         $resultOfQuestion = ($gamerAnswer === $rightAnswer) ? true : false;
         printResultOfQuestion($resultOfQuestion, $gamerAnswer, $rightAnswer, $nameOfGamer);
         if (!$resultOfQuestion) {

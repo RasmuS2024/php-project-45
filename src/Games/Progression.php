@@ -6,8 +6,7 @@ use function BrainGames\Engine\playGame;
 
 const GAME_DESCRIPTION = 'What number is missing in the progression?';
 const MAX_START_NUMBER = 9;
-const MAX_PROGRESSION_INCREMENT = 15;
-const MAX_NUMBER_PROGRESSION = '150';
+const MAX_NUMBER_PROGRESSION = 150;
 const COUNT_PROGRESSION = 10;
 
 function getProgressionQuestion()

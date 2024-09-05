@@ -35,11 +35,10 @@ function playGame(string $gameDescription, callable $gameFunction)
 {
     $nameOfGamer = welcomeToGameAndGetUserName();
     line($gameDescription);
-    $roundCount = 0;
     for ($i = 1; $i <= COUNT_ROUNDS; $i++) {
         [$question, $rightAnswer] = $gameFunction();
         $gamerAnswer = putQuestionAndGetAnswer($question);
-        $resultOfQuestion = ($gamerAnswer === $rightAnswer) ? true : false;
+        $resultOfQuestion = ($gamerAnswer === $rightAnswer);
         printResultOfQuestion($resultOfQuestion, $gamerAnswer, $rightAnswer, $nameOfGamer);
         if (!$resultOfQuestion) {
             return;
